@@ -1,0 +1,162 @@
+﻿<Window x:Class="test3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test3"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="Boter kaas en eieren" Height="750" Width="900">
+
+
+
+
+
+
+
+
+
+
+
+    <Grid>
+
+        <!--grid-->
+        <Grid.Background>
+            <SolidColorBrush Color="#ffe8fd"/>
+        </Grid.Background>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="225px" />
+            <ColumnDefinition Width="150px" />
+            <ColumnDefinition Width="150px" />
+            <ColumnDefinition Width="150px" />
+            <ColumnDefinition Width="225px" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+
+        <!--buttons-->
+
+        <Button x:Name="btn0_0" Grid.Column="1" Grid.Row="1" Click="btn0_0_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}">
+            
+        </Button>
+        <Button x:Name="btn1_0" Grid.Column="2" Grid.Row="1" Click="btn1_0_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}"/>
+        <Button x:Name="btn2_0" Grid.Column="3" Grid.Row="1" Click="btn2_0_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}"/>
+
+        <Button x:Name="btn3_1" Grid.Column="1" Grid.Row="2" Click="btn3_1_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}"/>
+        <Button x:Name="btn4_1" Grid.Column="2" Grid.Row="2" Click="btn4_1_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}"/>
+        <Button x:Name="btn5_1" Grid.Column="3" Grid.Row="2" Click="btn5_1_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}"/>
+
+        <Button x:Name="btn6_2" Grid.Column="1" Grid.Row="3" Click="btn6_2_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}"/>
+        <Button x:Name="btn7_2" Grid.Column="2" Grid.Row="3" Click="btn7_2_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}"/>
+        <Button x:Name="btn8_2" Grid.Column="3" Grid.Row="3" Click="btn8_2_Click" Background="#FFFFE8FD" BorderBrush="#FFF979FF" Foreground="{x:Null}"/>
+
+
+        <!--restart and exit button-->
+        <Button x:Name="restart" Grid.Column="4" Grid.Row="2" Height="40px" Width="75px" HorizontalAlignment="Center" VerticalAlignment="Top" Click="restart_Click" BorderBrush="{x:Null}" AutomationProperties.HelpText="Restart the game.">
+            <Button.Background>
+                <ImageBrush ImageSource="assets/restart.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="exit" Grid.Column="4" Grid.Row="2" Height="40px" Width="75px" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="exit_Click" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="assets/exit.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="change" Grid.Column="4" Grid.Row="2" Height="40px" Width="75px" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{x:Null}" Click="change_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="assets/change.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+
+
+        <!--images of naughts and crosses-->
+
+        <Image x:Name="cross1" Source="assets/cross.png" Visibility="Hidden" Grid.Column="1" Grid.Row="1"/>
+        <Image x:Name="cross2" Source="assets/cross.png" Visibility="Hidden" Grid.Column="2" Grid.Row="1"/>
+        <Image x:Name="cross3" Source="assets/cross.png" Visibility="Hidden" Grid.Column="3" Grid.Row="1"/>
+
+        <Image x:Name="cross4" Source="assets/cross.png" Visibility="Hidden" Grid.Column="1" Grid.Row="2"/>
+        <Image x:Name="cross5" Source="assets/cross.png" Visibility="Hidden" Grid.Column="2" Grid.Row="2"/>
+        <Image x:Name="cross6" Source="assets/cross.png" Visibility="Hidden" Grid.Column="3" Grid.Row="2"/>
+
+        <Image x:Name="cross7" Source="assets/cross.png" Visibility="Hidden" Grid.Column="1" Grid.Row="3"/>
+        <Image x:Name="cross8" Source="assets/cross.png" Visibility="Hidden" Grid.Column="2" Grid.Row="3"/>
+        <Image x:Name="cross9" Source="assets/cross.png" Visibility="Hidden" Grid.Column="3" Grid.Row="3"/>
+
+        <Image x:Name="naught1" Source="assets/naught.png" Visibility="Hidden" Grid.Column="1" Grid.Row="1"/>
+        <Image x:Name="naught2" Source="assets/naught.png" Visibility="Hidden" Grid.Column="2" Grid.Row="1"/>
+        <Image x:Name="naught3" Source="assets/naught.png" Visibility="Hidden" Grid.Column="3" Grid.Row="1"/>
+
+        <Image x:Name="naught4" Source="assets/naught.png" Visibility="Hidden" Grid.Column="1" Grid.Row="2"/>
+        <Image x:Name="naught5" Source="assets/naught.png" Visibility="Hidden" Grid.Column="2" Grid.Row="2"/>
+        <Image x:Name="naught6" Source="assets/naught.png" Visibility="Hidden" Grid.Column="3" Grid.Row="2"/>
+
+        <Image x:Name="naught7" Source="assets/naught.png" Visibility="Hidden" Grid.Column="1" Grid.Row="3"/>
+        <Image x:Name="naught8" Source="assets/naught.png" Visibility="Hidden" Grid.Column="2" Grid.Row="3"/>
+        <Image x:Name="naught9" Source="assets/naught.png" Visibility="Hidden" Grid.Column="3" Grid.Row="3"/>
+
+
+        <!--win counter-->
+        <TextBlock  x:Name="p1WinCounter" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="0" IsEnabled="False" FontFamily="Showcard Gothic" FontSize="36"/>
+        <TextBlock  x:Name="p2WinCounter" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="0" IsEnabled="False" FontFamily="Showcard Gothic" FontSize="36"/>
+
+        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="4" TextWrapping="Wrap" IsEnabled="False" FontFamily="Showcard Gothic" FontSize="24" Text="Player 1"/>
+        <TextBlock  Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="4" TextWrapping="Wrap" Text="player 2" IsEnabled="False" FontFamily="Showcard Gothic" FontSize="24"/>
+
+        <!--highlight whose turn it is-->
+        <Image x:Name="highlight1" Source="assets/highlight.png" Width="100" Grid.Row="4" VerticalAlignment="Top" Margin="60,28.4,64.8,0" Visibility="Hidden"/>
+        <Image x:Name="highlight2" Source="assets/highlight.png" Width="100" Grid.Row="4" Grid.Column="4" VerticalAlignment="Top" Margin="60,28.4,64.8,0" Visibility="Hidden"/>
+
+        <!--text for outcome-->
+        <TextBlock x:Name="outcome" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Center" Height="85"  TextWrapping="Wrap" VerticalAlignment="center" Width="450" FontFamily="Showcard Gothic" FontSize="36" TextAlignment="Center"/>
+
+        <!--start-->
+        <Rectangle x:Name="panel" Fill="#FFFFE8FD" HorizontalAlignment="Center" Height="750"  Stroke="Black" VerticalAlignment="Center" Width="900" Grid.ColumnSpan="5" Grid.RowSpan="5" Margin="1,2,-0.2,-0.4"/>
+
+        <TextBlock x:Name="startText" Grid.ColumnSpan="3" Grid.Column="1" HorizontalAlignment="Center" Height="85"  TextWrapping="Wrap" VerticalAlignment="Bottom" Width="450" FontFamily="Showcard Gothic" FontSize="36" TextAlignment="Center" Text="Player 1 starts with:"/>
+
+        <Button x:Name="startButton" Content="Start" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Center" Width="300" Height="150" BorderBrush="#FFF979FF" FontFamily="Showcard Gothic" FontSize="36" Background="#FFF979FF" Foreground="#FFFFE8FD" Click="Button_Click">
+
+        </Button>
+
+        <Image x:Name="selectNaught" Source="assets/naught.png" Grid.Column="2" Grid.Row="1" Visibility="Visible"/>
+        <Image x:Name="selectCross" Source="assets/cross.png" Grid.Column="2" Grid.Row="1" Visibility="Hidden"/>
+
+        <!--arrows-->
+        <Button x:Name="left" Grid.Column="1" Grid.Row="1" Height="50px" Width="50px" Click="left_Click" BorderBrush="{x:Null}" >
+            <Button.Background>
+                <ImageBrush ImageSource="assets/left.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="right" Grid.Column="3" Grid.Row="1" Height="50px" Width="50px" Click="right_Click" BorderBrush="{x:Null}" >
+            <Button.Background>
+                <ImageBrush ImageSource="assets/right.png"/>
+            </Button.Background>
+        </Button>
+
+
+
+
+
+
+
+
+    </Grid>
+
+</Window>
+
+
+
+
+
+
