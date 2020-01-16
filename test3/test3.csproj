@@ -139,13 +139,6 @@
     <Resource Include="assets\change.png" />
     <Resource Include="assets\left.png" />
     <Resource Include="assets\right.png" />
-    <Content Include="database\tictactoe.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="database\tictactoe_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>tictactoe.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
